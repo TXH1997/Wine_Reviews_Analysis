@@ -10,7 +10,7 @@ import pandas as pds
 data = pds.read_csv('./Wine Reviews/winemag-data-130k-v2.csv')
 
 
-# ## 标称属性country的可能聚会频数
+# ## 标称属性country的聚会频数
 
 # In[2]:
 
@@ -18,7 +18,7 @@ data = pds.read_csv('./Wine Reviews/winemag-data-130k-v2.csv')
 data['country'].value_counts()
 
 
-# ## 标称属性description的可能聚会频数
+# ## 标称属性description的聚会频数
 
 # In[3]:
 
@@ -26,7 +26,7 @@ data['country'].value_counts()
 data['description'].value_counts()
 
 
-# ## 标称属性desgination的可能聚会频数
+# ## 标称属性desgination的聚会频数
 
 # In[4]:
 
@@ -34,7 +34,7 @@ data['description'].value_counts()
 data['designation'].value_counts()
 
 
-# ## 标称属性province的可能聚会频数
+# ## 标称属性province的聚会频数
 
 # In[5]:
 
@@ -42,7 +42,7 @@ data['designation'].value_counts()
 data['province'].value_counts()
 
 
-# ## 标称属性region_1的可能聚会频数
+# ## 标称属性region_1的聚会频数
 
 # In[6]:
 
@@ -50,7 +50,7 @@ data['province'].value_counts()
 data['region_1'].value_counts()
 
 
-# ## 标称属性region_2的可能聚会频数
+# ## 标称属性region_2的聚会频数
 
 # In[7]:
 
@@ -58,7 +58,7 @@ data['region_1'].value_counts()
 data['region_2'].value_counts()
 
 
-# ## 标称属性taster_name的可能聚会频数
+# ## 标称属性taster_name的聚会频数
 
 # In[8]:
 
@@ -66,7 +66,7 @@ data['region_2'].value_counts()
 data['taster_name'].value_counts()
 
 
-# ## 标称属性taster_twitter_handle的可能聚会频数
+# ## 标称属性taster_twitter_handle的聚会频数
 
 # In[9]:
 
@@ -74,7 +74,7 @@ data['taster_name'].value_counts()
 data['taster_twitter_handle'].value_counts()
 
 
-# ## 标称属性title的可能聚会频数
+# ## 标称属性title的聚会频数
 
 # In[10]:
 
@@ -82,7 +82,7 @@ data['taster_twitter_handle'].value_counts()
 data['title'].value_counts()
 
 
-# ## 标称属性variety的可能聚会频数
+# ## 标称属性variety的聚会频数
 
 # In[11]:
 
@@ -90,7 +90,7 @@ data['title'].value_counts()
 data['variety'].value_counts()
 
 
-# ## 标称属性winery的可能聚会频数
+# ## 标称属性winery的聚会频数
 
 # In[12]:
 
