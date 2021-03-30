@@ -218,9 +218,15 @@ dropped = data.dropna(subset=['points', 'price'])
 ss.normaltest(dropped['price'])
 
 
+# In[27]:
+
+
+dropped['price'].corr(dropped['points'], method='pearson')
+
+
 # ## 计算数据对象相似性的函数，为了减少计算量而只考虑缺失值与附近20个对象的相似性
 
-# In[27]:
+# In[28]:
 
 
 def sim(e1, e2):
@@ -244,12 +250,16 @@ def get_fill_value(e0, pos):
     tail = pos + 10 if pos + 10 <= len(data) else len(data)
     scores = data.loc[range(head, tail)].apply(lambda e: sim(e0, e), axis=1)
     sorted_scores = pds.DataFrame({'score': scores}).sort_values(['score'], ascending=False)
-    return sorted_scores.iloc[0]['score']
+    for i, pos in enumerate(sorted_scores.index.tolist()):
+        if i == 0 or data['price'].isnull().values[pos]:
+            continue
+        else:
+            return data['price'].loc[pos]
 
 
 # ## 使用最相似的数据对象对应的值来填补缺失值
 
-# In[28]:
+# In[29]:
 
 
 most_sim = pds.DataFrame({'price': data['price']})
@@ -260,7 +270,7 @@ for i in col_num:
 
 # ## 填补后的直方图对比
 
-# In[29]:
+# In[30]:
 
 
 cmp_fillna_sim_price = pds.DataFrame({'original': data['price'], 'fillna': most_sim['price']})
@@ -269,7 +279,7 @@ cmp_fillna_sim_price.hist()
 
 # ## 填补后的盒图对比
 
-# In[30]:
+# In[31]:
 
 
 cmp_fillna_sim_price.boxplot()
@@ -277,7 +287,7 @@ cmp_fillna_sim_price.boxplot()
 
 # ## 填补后的五数概括对比
 
-# In[31]:
+# In[32]:
 
 
 cmp_fillna_sim_price.describe()
