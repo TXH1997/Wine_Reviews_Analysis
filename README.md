@@ -10,4 +10,4 @@
 # Usage
 * Download and unzip the dataset.
 * Rename the dataset folder as `Wine Reviews` and put it in the same folder as the code.
-* Run the `wine_analysis.py` with python or open the `Wine_analysis.ipynb` in jupyter notebook with python and run it.
+* Run the `wine_analysis.py` with python or open the `wine_analysis.ipynb` in jupyter notebook with python and run it.
