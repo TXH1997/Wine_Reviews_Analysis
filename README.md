@@ -10,4 +10,6 @@
 # Usage
 * Download and unzip the dataset.
 * Rename the dataset folder as `Wine Reviews` and put it in the same folder as the code.
-* Run the `wine_analysis.py` with python or open the `wine_analysis.ipynb` in jupyter notebook with python and run it.
+* This repo contains 2 experiments: `wine_analysis` and `frequent_pattern_mining`, run them as follows:
+  * Run the `wine_analysis.py` with python or open the `wine_analysis.ipynb` in jupyter notebook with python and run it.
+  * Run the `frequent_pattern_mining.py` with python or open the `frequent_pattern_mining.ipynb` in jupyter notebook with python and run it.
